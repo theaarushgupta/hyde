@@ -1,0 +1,4 @@
+# Previous Work
+
+### August - December 2020
+I was the Artificial Intelligence lead for truth, a powerful and accurate method for analyzing text and articles to determine it's trustworthiness; this project was one of seventy-five accepted projects out of more than 10,000 entries that were submitted from almost every part of the US to reach the semi-finalist stage of the 2020 [Samsung Solve for Tomorrow Competition](https://www.samsung.com/us/solvefortomorrow/). I designed and developed the entirety of the "brains" for the project and optimized it to reach 99% accuracy. This idea was also featured on the [KPIX CBS SF Bay Area](https://sanfrancisco.cbslocal.com/) news channel, where my team and I were invited to speak.

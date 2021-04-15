@@ -1,0 +1,88 @@
+/* top-level styles */
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body {
+    padding: 20px 20%;
+}
+
+/* global tag styles */
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+a {
+    color: #1c9bfd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2571db;
+}
+
+/* header styles */
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    user-select: none;
+}
+
+nav {
+    padding: 10px 0px;
+    overflow: hidden;
+    user-select: none;
+}
+
+nav a {
+    float: center;
+    color: #686868;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #d4d3d3;
+    color: #1f7ec7;
+}
+
+/* page styles */
+
+code {
+    font-family: monospace;
+}
+
+/* post styles */
+
+.post-date {
+    color: #777777;
+}
+
+/* footer styles */
+
+footer {
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #ffffff;
+}
+
+/* sizing specific styles */
+
+@media (max-width: 800px) {
+    body {
+        padding: 20px 10px;
+    }
+}
