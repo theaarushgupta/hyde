@@ -17,3 +17,6 @@ Install requirements from `requirements.txt`, initialize the virtual environment
 
 ### License
 This code is licensed under the GNU AGPLv3 license and any later versions. Please contact Aarush Gupta for any doubts concerning the license.
+
+### Additional Copyright Notice
+The design, styles, html, and text all belong to Aarush Gupta under another copyright. See [this repository](https://github.com/theaarushgupta/theaarushgupta.github.io) for more information regarding that.
