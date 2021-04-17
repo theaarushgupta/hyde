@@ -1,10 +1,5 @@
-<div align = "center">
-
-<img src = "/_assets/logo.png">
-
-<h1>Hyde - A simple static site generator</h1>
-
-</div>
+# Hyde
+A simple static site generator
 
 ### Overview
 Hyde is a simple static site generator which I made as a replacement for jekyll, which is too complicated for simple uses and not suitable for quick style changes. However, I still belive jekyll is a better choice for blogs and things where many different pages -- or posts -- are needed to be converted from markdown to html.
