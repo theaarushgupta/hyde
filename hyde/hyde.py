@@ -62,14 +62,18 @@ class BuildFile:
         try:
             filled = self.fillTemplate(pages[filename], navigation, mainHTML)
         except KeyError:
-            print(f"ERROR: no title found for \"{filename}\" in \"data/pages.yml\"")
+            print(f"[ERROR] no title found for \"{filename}\" in \"data/pages.yml\"")
             exit()
         compliledTemplate = self.environment.from_string(filled)
         compliledTemplate = compliledTemplate.render()
         publicHTMLFilename = filename.split(".")[0] + ".html"
-        with open(f"public/{publicHTMLFilename}", "w+") as publicHTML:
-            publicHTML.write(compliledTemplate)
-        print(f"Built \"pages/{filename}\" as \"public/{publicHTMLFilename}\"")
+        try:
+            with open(f"public/{publicHTMLFilename}", "w+") as publicHTML:
+                publicHTML.write(compliledTemplate)
+        except FileNotFoundError:
+            mkdir("public")
+            self.__main__(filename)
+        print(f"[INFO] Built \"pages/{filename}\" as \"public/{publicHTMLFilename}\"")
 
 def retrieveCommands() -> tuple:
     parser = ArgumentParser(
@@ -106,7 +110,7 @@ def clearPublicDirectory() -> None:
                     rmtree(itemPath)
                 else:
                     remove(itemPath)
-                print(f"Deleted public/{item}")
+                print(f"[INFO] Deleted public/{item}")
 
 def copyAssets() -> None:
     copytree(
@@ -120,7 +124,7 @@ def copyAssets() -> None:
             "assets"
         )
     )
-    print("Moved \"assets/\" to \"public/assets/\"")
+    print("[INFO] Moved \"assets/\" to \"public/assets/\"")
 
 def copyExtras() -> None:
     extrasPath = join(
@@ -139,7 +143,7 @@ def copyExtras() -> None:
             extra
         )
         copy(source, destination)
-        print(f"Moved \"extras/{extra}\" to \"public/{extra}\"")
+        print(f"[INFO] Moved \"extras/{extra}\" to \"public/{extra}\"")
 
 def main() -> None:
     command = retrieveCommands()
@@ -158,10 +162,8 @@ def main() -> None:
                 "public"
             )
         )
+        print("[INFO] Starting HTTP server to serve files")
         system("python3 -m http.server")
         exit()
     print("This is hyde - a simple static site generator")
-    print("Run \"./hyde --help\" to get started")
-
-if __name__ == "__main__":
-    main()
+    print("Run \"hyde --help\" to get started")

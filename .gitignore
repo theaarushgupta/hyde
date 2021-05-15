@@ -1,4 +1,8 @@
 .vscode/
-_venv/
+venv/
 
 public/
+
+build/
+dist/
+*egg-info/
