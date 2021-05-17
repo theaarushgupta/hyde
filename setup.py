@@ -12,7 +12,7 @@ with open(requirements) as requirements:
 
 setup(
     name = "hyde-generator",
-    version = "v0.0.3",
+    version = "v0.0.4",
     description = "a simple static site generator",
     long_description = readme,
     long_description_content_type = "text/markdown",

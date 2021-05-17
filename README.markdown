@@ -13,7 +13,7 @@
     </a>
 </p>
 
-<h1 align = "center"><a href = "https://pypi.org/project/hyde-generator/">Hyde <code>v0.0.3</code></a></h1>
+<h1 align = "center"><a href = "https://pypi.org/project/hyde-generator/">Hyde <code>v0.0.4</code></a></h1>
 <h3 align = "center">A simple static site generator</h3>
 
 ## Usage
@@ -22,7 +22,7 @@
 Install the library with `pip3 install hyde-generator`. The PyPI page is [here](https://pypi.org/project/hyde-generator/)
 
 ### Continued from last steps or already installed Hyde
-Run `hyde build` in the `tests/` directory (found in the Github repository) and then run `hyde serve` to see the built files.
+Run `hyde build` in the `sample/` directory (found in the Github repository) and then run `hyde serve` to see the built files.
 
 ## License
 This code is licensed under the GNU AGPLv3 license and any later versions.
